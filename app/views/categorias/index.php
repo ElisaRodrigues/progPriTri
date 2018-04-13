@@ -14,7 +14,7 @@
     <?php foreach ($categorias as $categoria): ?>
         <tr>
             <td> <?= $categoria->getId(); ?> <td/>
-            <td> <a href = "?acao=exibir&id'=<?= $categoria->getId(); ?>" ><?= $categoria->getNome() ?> </a> </td>
+            <td> <a href = "?acao=exibir&id=<?= $categoria->getId(); ?>" ><?= $categoria->getNome() ?> </a> </td>
         </tr>
     <?php endforeach;?>
 

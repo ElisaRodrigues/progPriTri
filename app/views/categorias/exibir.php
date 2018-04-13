@@ -1,7 +1,5 @@
 <html>
 <head> </head>
-<>
-<h1> CATEGORIAS</h1>
 
 <body>
 

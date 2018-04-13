@@ -35,7 +35,7 @@ switch ($acao){
         break;
 
 
-    case 'show':
+    case 'exibir':
         $id = $_GET['id'];
         $crud = new CRUDCategoria();
         $categoria = $crud->getCategoria($id);
@@ -44,6 +44,5 @@ switch ($acao){
 
     default: //CASO NÃO SEJA NENHUMA DOS ANTERIORES
         echo 'Ação inválida';
+
 }
-
-
