@@ -21,12 +21,13 @@ class CRUDCategoria
         $categorias = $resultado -> fetchAll(PDO::FETCH_ASSOC);
         $lista_Categoria = [];
 
-        foreach ($categorias as $categoria)
+        foreach ($categorias as $categoria) {
             $id = $categoria['id_categoria'];
             $nome = $categoria['nome_categoria'];
             $descricao = $categoria['descricao_categoria'];
             $lista_Categoria[] = new Categoria($id, $nome, $descricao);
-        return $categorias;
+        }
+        return $lista_Categoria;
     }
 
     public function getCategoria (int $id){

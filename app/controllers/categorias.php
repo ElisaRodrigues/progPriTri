@@ -20,6 +20,8 @@ switch ($acao){
 
         $crud = new CRUDCategoria();
         $categorias = $crud->getCategorias();
+        echo ('<pre>');
+
         include '../views/categorias/index.php';
 
         //percorrer array, exibindo os dados
@@ -31,6 +33,15 @@ switch ($acao){
     case 'inserir':
         echo 'Você escolheu INSERIR';
         break;
+
+
+    case 'show':
+        $id = $_GET['id'];
+        $crud = new CRUDCategoria();
+        $categoria = $crud->getCategoria($id);
+        include '../views/categorias/exibir.php';
+        break;
+
     default: //CASO NÃO SEJA NENHUMA DOS ANTERIORES
         echo 'Ação inválida';
 }
