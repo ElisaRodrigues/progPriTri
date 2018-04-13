@@ -18,11 +18,13 @@ switch ($acao){
     case 'index':
 
 
-        echo '<pre>';
-
         $crud = new CRUDCategoria();
         $categorias = $crud->getCategorias();
-        var_dump($categorias);
+
+        //percorrer array, exibindo os dados
+        foreach ($categorias as $categoria){
+            //exibir
+        }
 
         break;
     case 'inserir':
