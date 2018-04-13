@@ -20,6 +20,7 @@ switch ($acao){
 
         $crud = new CRUDCategoria();
         $categorias = $crud->getCategorias();
+        include '../views/categorias/index.php';
 
         //percorrer array, exibindo os dados
         foreach ($categorias as $categoria){

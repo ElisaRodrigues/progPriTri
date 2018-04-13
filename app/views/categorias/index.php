@@ -10,10 +10,13 @@
         <th> Nome Da Categoria </th>
     </tr>
 
-    <tr>
-        <td> 1 </td>
-        <td>Eletrônicos</td>
-    </tr>
+
+    <?php foreach ($categorias as $categoria): ?>
+        <tr>
+            <td> <?= $categoria->getId(); ?> <td/>
+            <td> <?= $categoria->getNome(); ?> </td>
+        </tr>
+    <?= endforeach;?>
 
 </table>
 </body>
