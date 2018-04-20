@@ -1,10 +1,9 @@
-<html>
-<head> </head>
-<body>
-<h1> CATEGORIAS</h1>
+
+<h1>Categoria</h1>
+
+<a href="categorias.php?acao=inserir"> Inserir Categoria</a>
 
 <table>
-
     <tr>
         <th> # </th>
         <th> Nome Da Categoria </th>
@@ -14,10 +13,9 @@
     <?php foreach ($categorias as $categoria): ?>
         <tr>
             <td> <?= $categoria->getId(); ?> <td/>
-            <td> <a href = "?acao=exibir&id=<?= $categoria->getId(); ?>" ><?= $categoria->getNome() ?> </a> </td>
+
+            <td> <a href ="app/controllers/categorias.php?acao=exibir&id=<?= $categoria->getId(); ?>" ><?= $categoria->getNome() ?> </a></td>
         </tr>
     <?php endforeach;?>
 
 </table>
-</body>
-</html>
