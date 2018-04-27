@@ -1,6 +1,8 @@
 
 <h1>Categoria</h1>
 
+<base href="http://localhost/progPriTri/">
+
 <a href="categorias.php?acao=inserir"> Inserir Categoria</a>
 
 <table>

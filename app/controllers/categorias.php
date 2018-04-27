@@ -30,22 +30,39 @@ switch ($acao){
 
         break;
 
-    case 'inserir':
-        include '../views/templates/cabecalho.php';
-        include '../views/categorias/inserir.php';
-        include '../views/templates/rodape.php';
-    break;
-
     case 'exibir':
         $id = $_GET['id'];
         $crud = new CRUDCategoria();
         $categoria = $crud->getCategoria($id);
         include '../views/templates/cabecalho.php';
         include '../views/categorias/exibir.php';
-        include "../views/templates/rodape.php";
-        break;
+        include '../views/templates/rodape.php';
 
-    default: //CASO NÃO SEJA NENHUMA DOS ANTERIORES
-        echo 'Ação inválida';
 
+    case 'inserir':
+        if (!isset($_POST['gravar'])) {
+            include '../views/templates/cabecalho.php';
+            include '../views/categorias/inserir.php';
+            include '../views/templates/rodape.php';
+        }else {
+            $nome = $_POST['nome'];
+            $descricao = $_POST['descricao'];
+            $novaCat = new Categoria (null, $nome, $descricao);
+            $crud = new CRUDCategoria();
+            $nome -> insertCategoria['$novaCat'];
+            header('location: categorias.php');
+        }
+
+    case 'alterar':
+
+        if (!isset($_POST['gravar'])) {
+            $id = $_GET['id'];
+
+            include '../views/templates/cabecalho.php';
+            include '../views/categorias/inserir.php';
+            include '../views/templates/rodape.php';
+        }
+
+    default:
+        echo "acao invalida";
 }

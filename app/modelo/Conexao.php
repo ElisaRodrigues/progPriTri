@@ -10,8 +10,8 @@
 
     const HOST      = "localhost";
     const NOMEBANCO = "3infoi3";
-    const USUARIO   = "3infoi3";
-    const SENHA     = "3infoi3";
+    const USUARIO   = "root";
+    const SENHA     = "";
 
 
     //!!!Substitua daqui para baixo
